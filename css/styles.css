@@ -1,0 +1,292 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdf7f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2, h3, h4 {
+  color: #8b5e3c;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #8b5e3c, #b07a50);
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: .5rem;
+}
+
+/* Intro / Presentación */
+.intro {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-left: 6px solid #8b5e3c;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.timeline {
+  position: relative;
+  width: 85%;
+  margin: 3rem auto;
+  padding: 2rem 0;
+  min-height: 400px; /* asegura altura */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;  /* fuerza que se alineen */
+  justify-content: space-between;
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+  opacity: 1; /* quitar la animación invisible */
+  transform: translateY(0); /* resetear */
+}
+
+.timeline-item.left .content {
+  margin-right: auto; /* empuja a la izquierda */
+}
+
+.timeline-item.right .content {
+  margin-left: auto; /* empuja a la derecha */
+}
+
+.timeline-item .content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 40%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.timeline-item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+
+/* Participants */
+.participants {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid #8b5e3c;
+}
+
+/* Escenarios */
+.scenarios {
+  width: 85%;
+  margin: 3rem auto;
+}
+
+.scenario {
+  background: #fff;
+  border-left: 5px solid #b07a50;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.scenario h3 {
+  margin-bottom: 1rem;
+}
+
+/* Video */
+.video-section {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-container iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Tabla */
+.matrix {
+  width: 95%;
+  margin: 4rem auto;
+}
+
+.matrix h2, .matrix h4 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.matrix th, .matrix td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-line;
+}
+
+.matrix th {
+  background: #8b5e3c;
+  color: white;
+}
+
+.matrix tr:nth-child(even) {
+  background: #fdf7f2;
+}
+
+.matrix tr:hover {
+  background: #f1e2d3;
+}
+
+/* Extra link (botón elegante) */
+.extra-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.extra-link a {
+  display: inline-block;
+  background: #8b5e3c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.extra-link a:hover {
+  background: #b07a50;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #8b5e3c;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* --- Ajustes responsivos --- */
+@media (max-width: 900px) {
+  .timeline {
+    width: 95%;
+    padding: 2rem 0;
+    background-size: 3px 100%; /* la línea central más delgada */
+  }
+
+  .timeline-item {
+    flex-direction: column !important; /* apilar en vertical */
+    text-align: left !important;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
+
+  .timeline-item .content {
+    width: 100%;          /* tarjeta ocupa todo el ancho */
+    margin: 0 auto;
+  }
+
+  .timeline-item img {
+    max-height: 180px;    /* controla alto de imágenes */
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .participants .card {
+    width: 90%;           /* cada tarjeta casi ancho completo */
+  }
+
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .matrix table {
+    font-size: 0.85rem;   /* reduce texto en la tabla */
+  }
+}
+
