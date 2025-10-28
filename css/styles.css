@@ -290,3 +290,69 @@ footer {
   }
 }
 
+/* === Tabla de Trayectos Históricos === */
+#trayectos-historicos {
+  width: 95%;
+  margin: 4rem auto;
+}
+
+#trayectos-historicos h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#trayectos-historicos .table-container {
+  overflow-x: auto;
+}
+
+#trayectos-historicos table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#trayectos-historicos caption {
+  caption-side: bottom;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+#trayectos-historicos th,
+#trayectos-historicos td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-line;
+}
+
+#trayectos-historicos th {
+  background: #8b5e3c;
+  color: white;
+  text-transform: uppercase;
+}
+
+#trayectos-historicos tr:nth-child(even) {
+  background: #fdf7f2;
+}
+
+#trayectos-historicos tr:hover {
+  background: #f1e2d3;
+}
+
+/* Responsive para tabla */
+@media (max-width: 800px) {
+  #trayectos-historicos table {
+    font-size: 0.85rem;
+  }
+  #trayectos-historicos th,
+  #trayectos-historicos td {
+    padding: 0.75rem;
+  }
+}
+
